@@ -2,7 +2,6 @@
 
 import pandas as pd
 
-
 TOTAL_SALES_COLUMN = "TotalOrderValue"
 
 
