@@ -79,8 +79,10 @@ Columns:
 
 ## How to Run
 
+### For Analysis (Notebooks)
+
 1. Create and activate a virtual environment.
-2. Install dependencies.
+2. Install dependencies and package.
 3. Start Jupyter Lab (or Jupyter Notebook).
 4. Open the notebooks and run cells in order.
 
@@ -88,12 +90,23 @@ Columns:
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
-pip install numpy pandas matplotlib seaborn jupyterlab
+pip install -e .  # Installs the package and dependencies
 jupyter lab
+```
+
+### For Development
+
+```bash
+make install-dev  # Installs package in editable mode + dev tools
+make test         # Run tests
+make lint         # Check code quality
+make format       # Auto-format code
 ```
 
 ## Analysis Notes
 
+- **Phase 1 Complete**: Project foundation with tooling, dependencies, and package structure.
+- **Phase 2 In Progress**: Core logic refactored into reusable modules. Q02 notebook updated to use shared functions.
 - Notebooks are readable and objective, but there is repeated setup logic across files (imports, loading, basic checks).
 - Most analysis is concentrated in notebook code; there is no reusable Python package yet.
 - There are no automated tests, formatting/linting, or CI checks in the current version.

@@ -21,7 +21,7 @@ Gaps to address:
 - No linting, formatting, typing, or CI pipeline
 - No command-line interface or deployable app layer
 
-## Phase 1: Project Foundation (Week 1)
+## Phase 1: Project Foundation (Week 1) ✅ COMPLETE
 
 Objectives:
 
@@ -30,10 +30,10 @@ Objectives:
 
 Deliverables:
 
-- Add requirements.txt or pyproject.toml
-- Add src/ package skeleton (for example, src/retail_analytics)
-- Add .editorconfig and optional pre-commit configuration
-- Add script for notebook output cleanup before commit
+- ✅ Add requirements.txt or pyproject.toml
+- ✅ Add src/ package skeleton (for example, src/retail_analytics)
+- ✅ Add .editorconfig and optional pre-commit configuration
+- ✅ Add script for notebook output cleanup before commit
 
 Skills highlighted:
 
@@ -41,7 +41,7 @@ Skills highlighted:
 - Dependency management
 - Repository hygiene
 
-## Phase 2: Refactor Core Logic (Week 2)
+## Phase 2: Refactor Core Logic (Week 2) 🔄 IN PROGRESS
 
 Objectives:
 
@@ -50,10 +50,10 @@ Objectives:
 
 Deliverables:
 
-- data_io.py for loading and schema checks
-- transforms.py for aggregations and derived features
-- plots.py for reusable visualization functions
-- Notebook updates to call shared functions instead of duplicating code
+- ✅ data_io.py for loading and schema checks
+- ✅ transforms.py for aggregations and derived features
+- ✅ plots.py for reusable visualization functions
+- 🔄 Notebook updates to call shared functions instead of duplicating code (Q02 updated, others pending)
 
 Skills highlighted:
 

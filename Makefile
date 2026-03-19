@@ -4,6 +4,7 @@ install:
 	pip install -r requirements.txt
 
 install-dev:
+	pip install -e .
 	pip install -r requirements-dev.txt
 	pre-commit install
 
