@@ -1,33 +1,114 @@
-# Retail Network Analysis
+# Python Retail Analytics
 
-This repository contains Jupyter notebooks with solutions for analyzing a dataset about a retail network that sells various products in several cities across the USA. The notebooks provide solutions for 10 business questions derived from the dataset.
+Notebook-based retail analysis project focused on business questions and visual storytelling with Python.
 
-## Dataset Description
+The repository contains exploratory data analysis (EDA) notebooks that answer 10 business questions on a US retail dataset, using pandas for data manipulation and matplotlib/seaborn for visualizations.
 
-The dataset contains information about sales transactions, including the products sold, sales values, order dates, cities, states, and segments.
+## Current Project Snapshot
 
-## Business Questions
+What this project already demonstrates:
 
-1. **City with Highest Sales Value of 'Office Supplies' Category:** Identify the city with the highest sales value of products in the 'Office Supplies' category.
+- Problem framing around business questions
+- Practical use of pandas groupby and aggregations
+- Chart building with matplotlib and seaborn
+- Organized notebook-per-question workflow
+- Exported visual artifacts in the images folder
 
-2. **Total Sales by Order Date:** Calculate the total sales for each order date and visualize the results using a bar chart.
+## Dataset Profile
 
-3. **Total Sales by State:** Determine the total sales for each state and visualize the results using a bar chart.
+Source file: data/dataset.csv
 
-4. **Top 10 Cities with Highest Total Sales:** Identify the top 10 cities with the highest total sales and visualize the results using a bar chart.
+- Records: 9700
+- Columns: 11
+- Date range: 03/01/2015 to 30/12/2018
+- Segments: 3
+- Cities: 528
+- States: 49
+- Categories: 3
+- Subcategories: 17
 
-5. **Segment with Highest Total Sales:** Determine which segment had the highest total sales and visualize the results using a pie chart.
+Columns:
 
-6. **Total Sales by Segment and Year:** Calculate the total sales for each segment and year.
+- OrderId
+- OrderDate
+- CustomerId
+- Segment
+- Country
+- City
+- State
+- ProductId
+- Category
+- SubCategory
+- TotalOrderValue
 
-7. **Number of Sales Eligible for 15% Discount:** Simulate sales eligible for a 15% discount based on specified criteria.
+## Business Questions and Notebooks
 
-8. **Average Sales Value Before and After 15% Discount:** Calculate the average sales value before and after applying a 15% discount.
+| Question | Notebook | Visualization Output |
+| --- | --- | --- |
+| Q01. City with highest Office Supplies sales | Q01_HighestSalesValue.ipynb | - |
+| Q02. Total sales by order date | Q02_TotalSalesByOrderDate.ipynb | images/q2_total_sales_per_date.png |
+| Q03. Total sales by state | Q03_TotalSalesByState.ipynb | images/q3_total_sales_per_state.png |
+| Q04. Top 10 cities by total sales | Q04_HighestSalesCities.ipynb | images/q4_top10_cities.png |
+| Q05. Segment with highest total sales | Q05_SegmentHighestTotalSales.ipynb | images/q5_sales_per_segment.png |
+| Q06. Total sales by segment and year | Q06_SegmentTotalPerYear.ipynb | images/q6_sales_per_segment_year.png |
+| Q07. Sales eligible for 15% discount | Q07_Q08_CalculateDiscount.ipynb | images/q7_discounts.png |
+| Q08. Average order value before and after discount | Q07_Q08_CalculateDiscount.ipynb | images/q8_discounts.png |
+| Q09. Average sales by segment, year and month | Q09_AverageSalesSegment.ipynb | images/q9_AverageSales.png |
+| Q10. Total sales by category/subcategory (Top 12) | Q10_TotalSalesByCategory.ipynb | images/q10_TotalSalesTop12.png |
 
-9. **Average Sales by Segment, Year, and Month:** Calculate the average sales for each segment, year, and month and visualize the results using a line chart.
+## Repository Structure
 
-10. **Total Sales by Category and Subcategory (Top 12):** Determine the total sales for each category and subcategory, considering only the top 12 subcategories, and visualize the results using a single chart.
+```text
+.
+|-- data/
+|   `-- dataset.csv
+|-- images/
+|   `-- *.png
+|-- Q01_HighestSalesValue.ipynb
+|-- Q02_TotalSalesByOrderDate.ipynb
+|-- Q03_TotalSalesByState.ipynb
+|-- Q04_HighestSalesCities.ipynb
+|-- Q05_SegmentHighestTotalSales.ipynb
+|-- Q06_SegmentTotalPerYear.ipynb
+|-- Q07_Q08_CalculateDiscount.ipynb
+|-- Q09_AverageSalesSegment.ipynb
+|-- Q10_TotalSalesByCategory.ipynb
+|-- README.md
+`-- ROADMAP.md
+```
 
-## Usage
+## How to Run
 
-To explore the solutions for the business questions, navigate to the respective Jupyter notebook files in this repository. Each notebook provides code implementations and visualizations for answering the corresponding question.
+1. Create and activate a virtual environment.
+2. Install dependencies.
+3. Start Jupyter Lab (or Jupyter Notebook).
+4. Open the notebooks and run cells in order.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install numpy pandas matplotlib seaborn jupyterlab
+jupyter lab
+```
+
+## Analysis Notes
+
+- Notebooks are readable and objective, but there is repeated setup logic across files (imports, loading, basic checks).
+- Most analysis is concentrated in notebook code; there is no reusable Python package yet.
+- There are no automated tests, formatting/linting, or CI checks in the current version.
+
+These points are normal for an EDA-first project, and they are exactly where the next evolution can strongly highlight Python engineering skills.
+
+## Evolution Plan
+
+The detailed step-by-step evolution plan is in ROADMAP.md.
+
+High-level direction:
+
+1. Refactor repeated notebook logic into reusable Python modules.
+2. Add tests, linting, type hints, and CI automation.
+3. Expand analytics with more advanced techniques (RFM, cohort, forecasting).
+4. Productize outcomes with a CLI and an interactive dashboard.
+
+Following this path turns the project from notebook-only analysis into a portfolio-grade Python analytics application.
